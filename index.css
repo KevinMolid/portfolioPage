@@ -1,0 +1,149 @@
+body {
+  color: #252525;
+  background-color: #fff;
+  margin: 0;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 21px;
+  font-weight: 300;
+}
+
+/* Layout */
+
+header, 
+section {
+  padding: 100px 0;
+}
+
+.profile-img {
+  width: 300px;
+  border: 10px solid white;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.centered {
+  text-align: center;
+}
+
+.container {
+  width: 570px;
+  margin: 0 auto;
+}
+
+/* Typography */
+
+h1,
+h2 {
+  color: #a5a5a5;
+  font-weight: 300;
+}
+
+h1, h2 {
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 42px;
+  border-top: 1px solid #a5a5a5;
+  border-bottom: 1px solid #a5a5a5;
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 36px;
+  margin-bottom: 0;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.small-text {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+h3,
+.accent-text,
+.name,
+time,
+a {
+  font-weight: 900;
+}
+
+.name, time {
+  color: #a5a5a5;
+}
+
+.accent-text {
+  color: #252525;
+  display: block;
+}
+
+h1 .accent-text {
+  font-size: 80px;
+}
+
+h2 .accent-text {
+  font-size: 60px;
+}
+
+/* Links */
+
+a {
+  color: #99D930;
+}
+
+a:hover,
+a:focus {
+  color: #131313;
+}
+
+.btn {
+  color:#252525;
+  background-color: #99D930;
+  padding: 10px 25px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.btn:hover,
+.btn:focus {
+  color:#fff;
+  background-color: #252525;
+}
+
+/* pseudo-classes */
+
+.bordered {
+  border: 1px dotted red;
+}
+
+/* inverse */
+
+.inverse {
+  color: #fff;
+  background-color: #252525;
+}
+
+.inverse .accent-text {
+  color: #fff;
+}
+
+.inverse .btn:hover,
+.inverse .btn:focus {
+  color: #252525;
+  background-color: #fff;
+}
+
+.inverse a:hover,
+.inverse a:focus {
+  color: #fff;
+}
