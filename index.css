@@ -1,55 +1,147 @@
 body {
-  color: #252525;
-  background-color: #fff;
+  color: #222222;
+  background-color: #ffffff;
   margin: 0;
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  font-size: 21px;
-  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
 }
 
-/* Layout */
+* {
+  box-sizing: border-box;
+}
 
-header, 
+/* Typography */
+.large-p {
+  font-size: 1.2rem;
+}
+
+/* Header */
+
+header {
+  padding: 0 100px;
+}
+
+.header {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-txt {
+  font-size: 1.5rem; /* 24px */
+  font-weight: 600;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 1.2em;
+}
+
+nav ul li {
+  transition: color 0.2s;
+}
+
+nav ul li:hover {
+  cursor: pointer;
+  color: #45b4de;
+}
+
+/* Sections */
+
 section {
-  padding: 100px 0;
-}
-
-.profile-img {
-  width: 300px;
-  border: 10px solid white;
-  border-radius: 50%;
-  margin: 0 auto;
-}
-
-.centered {
-  text-align: center;
+  padding: 20px 100px;
 }
 
 .container {
-  width: 570px;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.inverse {
+  color: #ffffff;
+  background: #020b15;
+}
+
+.tech-bg {
+  background-image: url('images/giphy.gif');
+  background-size: cover;
+}
+
+/* Habitual Section */
+.habitual-section {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto;
+  grid-template-areas: 
+    "title title"
+    "content image";
+  gap: 1em 2em;
+}
+
+.habitual-title {
+  grid-area: title;
+}
+
+.habitual-img {
+  grid-area: image;
+}
+
+/* Hero section */
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(50%, 700px) auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.hero-txt {
+  margin: auto 0;
+  text-shadow: 1px 1px 10px black;
+}
+
+.profile-img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 50%;
   margin: 0 auto;
+  box-shadow: 1px 1px 10px black;
+}
+
+.some-wrapper {
+  font-size: 2.5rem;
+}
+
+/* featured */
+.featured-img {
+  width: 100%;
+  margin-top: 2em;
 }
 
 /* Typography */
 
-h1,
-h2 {
-  color: #a5a5a5;
-  font-weight: 300;
-}
-
 h1, h2 {
-  margin-top: 0;
+  margin: 0;
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 4rem; /* 64px */
 }
 
-h2 {
+.regular {
+  font-weight: 400;
+}
+
+.subheading {
+  display: block;
+  font-size: 3rem;
+}
+
+.lined-heading {
   font-size: 42px;
-  border-top: 1px solid #a5a5a5;
   border-bottom: 1px solid #a5a5a5;
   padding: 20px 0;
   margin-bottom: 20px;
@@ -69,81 +161,74 @@ p {
   margin-top: 5px;
 }
 
-h3,
-.accent-text,
-.name,
-time,
-a {
-  font-weight: 900;
-}
-
 .name, time {
   color: #a5a5a5;
 }
 
 .accent-text {
-  color: #252525;
-  display: block;
-}
-
-h1 .accent-text {
-  font-size: 80px;
-}
-
-h2 .accent-text {
-  font-size: 60px;
+  color: #45b4de;
 }
 
 /* Links */
-
 a {
-  color: #99D930;
+  color: #ff436c;
 }
 
 a:hover,
 a:focus {
-  color: #131313;
+  color: rgb(255, 97, 137);
 }
 
 .btn {
-  color:#252525;
-  background-color: #99D930;
-  padding: 10px 25px;
+  color: #ffffff;
+  display: flex;
+  width: 200px;
+  text-align: center;
+  padding: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: #45b4de;
   text-decoration: none;
   display: inline-block;
-  margin-top: 30px;
+  margin-top: 2em;
+  margin-right: 1em;
+  border-radius: 24px;
+  cursor: pointer;
+}
+
+.secondary-btn {
+  color: #DDD;
+  background: #020b15;
+  border: 2px solid #AAA;
 }
 
 .btn:hover,
 .btn:focus {
-  color:#fff;
-  background-color: #252525;
+  background-color: #2ccffd;
 }
 
-/* pseudo-classes */
-
-.bordered {
-  border: 1px dotted red;
+.secondary-btn:hover,
+.secondary-btn:focus {
+  background: #03111c;
 }
 
-/* inverse */
-
-.inverse {
-  color: #fff;
-  background-color: #252525;
+/* Footer */
+footer {
+  height: 100px;;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.inverse .accent-text {
-  color: #fff;
+/* Utility classes */
+.primary {
+  color: #45b4de;
 }
 
-.inverse .btn:hover,
-.inverse .btn:focus {
-  color: #252525;
-  background-color: #fff;
+.centered {
+  text-align: center;
 }
 
-.inverse a:hover,
-.inverse a:focus {
-  color: #fff;
+.center-vertical {
+  margin: auto 0;
 }
